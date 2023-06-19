@@ -1,2 +1,0 @@
-# Zombie-Detector
- 
