@@ -30,4 +30,29 @@
   
   })(window.jQuery);
 
-
+  
+  function toggleCard() {
+    const innerCard = document.querySelector('.innerCard');
+    innerCard.style.transform = innerCard.style.transform === 'rotateY(180deg)' ? 'none' : 'rotateY(180deg)';
+  }
+    // $(document).ready(function() {
+    //   $('#myForm').submit(function(e) {
+    //     e.preventDefault(); // Prevent the default form submission behavior
+    
+    //     // Get the form data
+    //     var formData = $(this).serialize();
+    
+    //     // Send the form data using AJAX
+    //     $.ajax({
+    //       type: 'POST',
+    //       url: '/submit', // Replace with your server-side endpoint
+    //       data: formData,
+    //       success: function(response) {
+    //         // Handle the response from the server
+    //         $('#result').html(response);
+    //       }
+    //     });
+    //   });
+    // });
+  
+  

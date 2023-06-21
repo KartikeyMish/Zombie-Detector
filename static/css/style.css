@@ -1,15 +1,4 @@
-/*
 
-TemplateMo 587 Tiya Golf Club
-
-https://templatemo.com/tm-587-tiya-golf-club
-
-*/
-
-
-/*---------------------------------------
-  CUSTOM PROPERTIES ( VARIABLES )             
------------------------------------------*/
 :root {
   --white-color:                  #ffffff;
   --primary-color:                #81B29A;
@@ -58,7 +47,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--dark-color);
+  color: var(--white-color);
 }
 
 h1,
@@ -161,6 +150,117 @@ background-image: linear-gradient(315deg, #3d405b 0%, #74d680 74%);
 
 /*---------------------------------------
   ANIMATED HEADLINE               
+-----------------------------------------*/
+/*---------------------------------------
+  form-new -start              
+-----------------------------------------*/
+.myCard {
+  background-color: transparent;
+  width: 330px;
+  height: 500px;
+  perspective: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.flipButton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.flipButton:hover {
+  background-color: #dddddd;
+}
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.innerCard {
+  padding-top: 20%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+.flipped {
+  transform: rotateY(180deg);
+}
+
+
+.frontSide,
+.backSide {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  color: white;
+  box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+}
+
+.frontSide,
+.frontSide::before {
+  background-image: linear-gradient(to right top, #091322, #2f214f, #771562, #bf004f, #eb1212);
+}
+
+.backSide,
+.backSide::before {
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.backSide {
+  transform: rotateY(180deg);
+}
+
+.frontSide::before,
+.backSide::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 1em;
+  filter: blur(20px);
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0.3;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+/*---------------------------------------
+  form new - end               
 -----------------------------------------*/
 .cd-words-wrapper {
   display: inline-block;
@@ -643,6 +743,16 @@ background-image: linear-gradient(315deg, #3d405b 0%, #74d680 74%);
 /*---------------------------------------
   HERO        
 -----------------------------------------*/
+.row1{
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .hero-section {
   background-image: url('../images/zombie.jpg');
   background-repeat: no-repeat;
@@ -690,6 +800,35 @@ background-image: linear-gradient(315deg, #3d405b 0%, #74d680 74%);
   position: relative;
   z-index: 22;
 }
+.images{
+    width:45%;
+    height: 100%;
+    position: absolute;
+    right: 100px;
+    bottom: 60px;
+}
+.images img{
+  height: auto;
+  max-width: 60%;
+  position: absolute;
+  left: 70%;
+  transform: translateX(-50%);
+  transition: bottom 1s,  left 1s;
+  /* bottom:20%; */
+  top:-80%;
+  z-index: -100;
+}
+.bottom{
+  z-index: 1;
+}
+.img-fluid{
+  max-width: 60%;
+}
+.images:hover .zombie{
+   left: 75%;
+   max-width: 50%;
+   top:-60%;
+}
 
 
 /*---------------------------------------
@@ -703,7 +842,24 @@ background-image: linear-gradient(315deg, #3d405b 0%, #74d680 74%);
   position: relative;
   margin-bottom: -70px;
 }
-
+.zomb{
+  width:45%;
+  height: 80%;
+  position: absolute;
+  right: 100px;
+  bottom: 60px;
+}
+.zombie11111111{
+  height: auto;
+  max-width: 60%;
+  position: relative;
+  left: 70%;
+  transform: translateX(-50%);
+  transition: bottom 1s,  left 1s;
+  /* bottom:20%; */
+  top:-80%;
+  z-index: -100;
+}
 
 .section-bg-image .container + svg {
   transform: rotate(180deg);
@@ -751,9 +907,12 @@ background-image: linear-gradient(315deg, #3d405b 0%, #74d680 74%);
 /*---------------------------------------
   ABOUT SECTOIN              
 -----------------------------------------*/
+
+
 .about-section {
   padding-bottom: 70px;
   background-color: var(--secondary-color);
+  /* display: inline-flex; */
 }
 
 .member-block-image-wrap {
@@ -809,7 +968,7 @@ background-image: linear-gradient(315deg, #3d405b 0%, #74d680 74%);
   -webkit-box-shadow: 0 0 20px var(--sh);
           box-shadow: 0 0 20px var(--sh);
   display: -webkit-box;
-  display: -ms-flexbox;
+  display: -ms-inline-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -818,7 +977,7 @@ background-image: linear-gradient(315deg, #3d405b 0%, #74d680 74%);
   gap: 1.5em 1em;
   padding: 1em;
   position: relative;
-  max-width: 75%;
+  max-width: 40%;
   max-height: 100px;
   -webkit-transition: background .3s ease-out, max-height .3s ease-out;
   transition: background .3s ease-out, max-height .3s ease-out;
@@ -833,10 +992,10 @@ background-image: linear-gradient(315deg, #3d405b 0%, #74d680 74%);
   font-weight: 700;
   display: grid;
   width: calc(100% - 2em);
-  height: 60%;
+  height: 45%;
   position: absolute;
   place-items: center;
-  z-index: 99999;
+  z-index: 98;
 }
 
 .form::after {
@@ -852,7 +1011,7 @@ background-image: linear-gradient(315deg, #3d405b 0%, #74d680 74%);
   top: 0;
   display: block;
   position: absolute;
-  z-index: 999;
+  z-index: 97;
 }
 
 .form::after,
@@ -1063,13 +1222,13 @@ label:has(select:valid) {
   opacity: 1;
 }
 
-/* .form:hover:has(:focus, :active):valid .submitCard {
+.form:hover:has(:focus, :active):valid .submitCard {
   max-height: 180px;
   opacity: 1;
   -webkit-transition: opacity 1s ease-out .5s, translate 1.3s ease-out;
   transition: opacity 1s ease-out .5s, translate 1.3s ease-out;
   translate: 0 100%;
-} */
+}
 
 .form:hover:invalid {
   -webkit-transition: all .3s ease-out;
