@@ -147,6 +147,15 @@ background-image: linear-gradient(315deg, #3d405b 0%, #74d680 74%);
   color: var(--white-color);
 }
 
+.fotter-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7; /* Adjust the opacity as desired */
+}
 
 /*---------------------------------------
   ANIMATED HEADLINE               
@@ -792,7 +801,7 @@ background-image: linear-gradient(315deg, #3d405b 0%, #74d680 74%);
   BACKGROUND IMAGE SECTION        
 -----------------------------------------*/
 .section-bg-image {
-  background-image: url('../images/zombie.jpg');
+  background-image: url('../images/fullfotter.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1439,18 +1448,27 @@ label:has(select:valid) {
  World Status        
 -----------------------------------------*/
 .world{
-  display: block;
+  /* display: block; */
+  display: flex;
+  justify-content: center;
   margin-left:auto;
   margin-right: auto;
   width: 100%;
   height: auto;
   border-radius: 20px;
   transition: box-shadow 1s ease;
+  transition: width 1s ease ;
   
 }
 .world-parent:hover .world {
   box-shadow: 0 0 30px red; /* Adjust the box shadow color and other properties as desired */
   transition: all 1s delay;
+  width:130%;
+}
+.world-parent:hover {
+  display: flex;
+  justify-content: center;
+  /* margin-left:40% ;   */
 }
 
 /*---------------------------------------

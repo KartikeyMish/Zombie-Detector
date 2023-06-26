@@ -260,19 +260,101 @@
 
                         <div class="col-lg-6 col-12">
                             <div class="section-bg-image-block">
-                                <h2 class="mb-lg-3">Get our newsletter</h2>
-
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore.</p>
-
-                                <form action="#" method="get" class="custom-form mt-lg-4 mt-2" role="form">
-                                    <div class="input-group input-group-lg">
-                                        <span class="input-group-text bi-envelope" id="basic-addon1"></span>
-
-                                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required="">
-
-                                        <button type="submit" class="form-control">Subscribe</button>
+                                <div
+                                    id="carouselVideoExample"
+                                    class="carousel slide carousel-fade"
+                                    data-mdb-ride="carousel"
+                                    >
+                                    <!-- Indicators -->
+                                    <div class="carousel-indicators">
+                                        <button
+                                        type="button"
+                                        data-mdb-target="#carouselVideoExample"
+                                        data-mdb-slide-to="0"
+                                        class="active"
+                                        aria-current="true"
+                                        aria-label="Slide 1"
+                                        ></button>
+                                        <button
+                                        type="button"
+                                        data-mdb-target="#carouselVideoExample"
+                                        data-mdb-slide-to="1"
+                                        aria-label="Slide 2"
+                                        ></button>
+                                        <button
+                                        type="button"
+                                        data-mdb-target="#carouselVideoExample"
+                                        data-mdb-slide-to="2"
+                                        aria-label="Slide 3"
+                                        ></button>
                                     </div>
-                                </form>
+
+                                    <!-- Inner -->
+                                    <div class="carousel-inner">
+                                        <!-- Single item -->
+                                        <div class="carousel-item active">
+                                        <video class="img-fluid" autoplay loop muted>
+                                            <source src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" />
+                                        </video>
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>First slide label</h5>
+                                            <p>
+                                            Nulla vitae elit libero, a pharetra augue mollis interdum.
+                                            </p>
+                                        </div>
+                                        </div>
+
+                                        <!-- Single item -->
+                                        <div class="carousel-item">
+                                        <video class="img-fluid" autoplay loop muted>
+                                            <source src="https://mdbcdn.b-cdn.net/img/video/forest.mp4" type="video/mp4" />
+                                        </video>
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Second slide label</h5>
+                                            <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            </p>
+                                        </div>
+                                        </div>
+
+                                        <!-- Single item -->
+                                        <div class="carousel-item">
+                                        <video class="img-fluid" autoplay loop muted>
+                                            <source
+                                            src="https://mdbcdn.b-cdn.net/img/video/Agua-natural.mp4"
+                                            type="video/mp4"
+                                            />
+                                        </video>
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Third slide label</h5>
+                                            <p>
+                                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                                            </p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <!-- Inner -->
+
+                                    <!-- Controls -->
+                                    <button
+                                        class="carousel-control-prev"
+                                        type="button"
+                                        data-mdb-target="#carouselVideoExample"
+                                        data-mdb-slide="prev"
+                                    >
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button
+                                        class="carousel-control-next"
+                                        type="button"
+                                        data-mdb-target="#carouselVideoExample"
+                                        data-mdb-slide="next"
+                                    >
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                    </div>
                             </div>
                         </div>
 
@@ -286,7 +368,7 @@
             
 
             <section class="contact-section section-padding" id="section_5">
-                <div class="container">
+                
                     <div class="col-lg-5 col-12 " style="margin: auto;">
                         <h2 class="mb-4 pb-2 text-center">World Status</h2>
                         <div class="world-parent">
@@ -294,10 +376,10 @@
                         </div>
                           
                     </div>                  
-                </div>  
+                
             </section>
         </main>
-
+        <section class="justify-content-center align-items-center" >
         <footer class="site-footer">
             <div class="container">
                 <div class="row">
@@ -348,21 +430,21 @@
 
                 </div>
             </div>
-            <div class="svg-container">
+            <div class="fotter-overlay">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <defs>
-                  <linearGradient id="gradient" gradientTransform="rotate(147)">
-                    <stop offset="0%" stop-color="#ff0000" />
-                    <stop offset="100%" stop-color="#cf1010" />
-                  </linearGradient>
-                </defs>
-                <path fill="url(#gradient)" fill-opacity="1" d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
+                    <pattern id="bg-pattern" patternUnits="userSpaceOnUse" width="100%" height="100%">
+                      <image href="/static/images/fotter.jpg" x="0" y="0" width="100%" height="100%"preserveAspectRatio="none"  />
+                    </pattern>
+                  </defs>
+                <path fill="url(#bg-pattern)" fill-opacity="1" d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
             </svg>
-            </div>
+        </div>
+            
               
               
             </footer>
-
+        </section>
 
         <!-- JAVASCRIPT FILES -->
         <script src="../static/js/jquery.min.js"></script>
