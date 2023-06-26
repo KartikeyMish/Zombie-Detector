@@ -3,16 +3,16 @@ import pickle
 
 app = Flask(__name__)
 
+
+
 # Load the ML model from pickle file
 with open('model.pkl', 'rb') as file:
     model = pickle.load(file)
 
-@app.route('/predict', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        # Retrieve form data
-        # rurality = request.form.get('rurality')
-        rurality = 1
+        rurality = request.form.get('rurality')
         household = request.form.get('household')
         age = request.form.get('age')
         water = request.form.get('water')
@@ -39,4 +39,4 @@ def index():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True ,port=5000)
