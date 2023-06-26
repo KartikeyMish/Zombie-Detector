@@ -1448,17 +1448,16 @@ label:has(select:valid) {
  World Status        
 -----------------------------------------*/
 .world{
-  /* display: block; */
-  display: flex;
-  justify-content: center;
-  margin-left:auto;
-  margin-right: auto;
   width: 100%;
   height: auto;
   border-radius: 20px;
   transition: box-shadow 1s ease;
   transition: width 1s ease ;
   
+}
+.world-parent{
+  display: flex;
+  justify-content: center;
 }
 .world-parent:hover .world {
   box-shadow: 0 0 30px red; /* Adjust the box shadow color and other properties as desired */
