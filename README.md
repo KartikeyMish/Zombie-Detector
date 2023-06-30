@@ -17,8 +17,11 @@
 ## Technologies Used
 
 🖥️ Front-end: HTML, CSS, JavaScript,BootStrap
+
 ⚙️ Backend: Python, Flask
+
 🧠 Machine Learning: Python libraries (e.g., scikit-learn, TensorFlow,RandomForest)
+
 🚀 Deployment: Web server (EC2)
 
 ## Getting Started
