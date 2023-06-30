@@ -2,17 +2,37 @@
 
 🧟 The Zombie Detector Web App is a web application that predicts the survival chances of individuals and their families in a zombie apocalypse scenario. It takes input data about the alive persona and their family and provides a prediction on whether they will survive or not.
 
+![here](static/images/1.png)
+
 ## Features
 
 📝 Input Data: Collects data about the alive persona and their family members.
 
+![here](static/images/2.png)
+
 🔮 Prediction: Utilizes machine learning algorithms to predict the survival chances based on the input data.
+
+![here](static/images/3.png)
+![here](static/images/4.png)
+
+
 
 💻 User Interface: Provides a user-friendly interface for easy data input and result visualization.
 
+
+
 🧟 Prepare Yourself: Learn how to prepare for a zombie apocalypse with helpful tips and resources.
 
+
+
+![here](static/images/5.png)
+
+
 🌍 World Situation: Stay informed about the current world situation related to zombie outbreaks and updates.
+
+
+![here](static/images/6.png)
+
 
 ## Technologies Used
 
@@ -61,3 +81,5 @@
 ## Contact
 
 📧 For any inquiries or further information, please contact [Kartikey Mishra](mailto:kartikeymishra626@gmail.com).
+
+
