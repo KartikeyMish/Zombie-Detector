@@ -5,9 +5,13 @@
 ## Features
 
 📝 Input Data: Collects data about the alive persona and their family members.
+
 🔮 Prediction: Utilizes machine learning algorithms to predict the survival chances based on the input data.
+
 💻 User Interface: Provides a user-friendly interface for easy data input and result visualization.
+
 🧟 Prepare Yourself: Learn how to prepare for a zombie apocalypse with helpful tips and resources.
+
 🌍 World Situation: Stay informed about the current world situation related to zombie outbreaks and updates.
 
 ## Technologies Used
