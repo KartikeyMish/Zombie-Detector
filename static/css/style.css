@@ -1,7 +1,7 @@
 
 :root {
   --white-color:                  rgb(255, 255, 255);
-  --primary-color:                #81B29A;
+  --primary-color:                #ff0000;
   --secondary-color:              #000000 ;
   --section-bg-color:             #F4F1DE;
   --custom-btn-bg-color:          #e31010;
@@ -31,6 +31,7 @@
   --font-weight-medium:           500;
   --font-weight-bold:             700;
 }
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Sora&family=Unbounded:wght@300;400&family=Ysabeau+SC:wght@700&display=swap');
 
 body {
   background-color: var(#000000);
@@ -106,7 +107,7 @@ button {
 
 a {
   display: inline-block;
-  color: var(--secondary-color);
+  color: #f7ecec;
   text-decoration: none;
 }
 
@@ -141,6 +142,16 @@ background-image: linear-gradient(315deg, #3d405b 0%, #74d680 74%);
   bottom: 0;
   left: 0;
 }
+  .fotter-overlay {
+    content: "";
+    background: rgba(0.7, 0.7, 0.7, 0.7) linear-gradient( #000000 0% ,#130606 29%,#7e0a0a 100% ) repeat scroll 0% 0%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 12;
+  }
 
 ::selection {
   background-color: var(--primary-color);
@@ -164,68 +175,87 @@ background-image: linear-gradient(315deg, #3d405b 0%, #74d680 74%);
   form-new -start              
 -----------------------------------------*/
 .card {
+  width: auto;
+  height: 100%;
+  /* display: rela; */
   position: relative;
-  width: 190px;
-  height: 254px;
-  background-color: #000;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  padding: 12px;
-  gap: 12px;
-  border-radius: 8px;
+  padding: 2em;
+  box-shadow:  0 0 60px #8a4d0f inset;
+  background: #fffef0;
+  filter: url(#wavy2);
+  box-shadow: #000000;
+  padding-top: 2%;
+  padding-left: 3;
+  transition: 1s box-shadow all;
+  
+}
+.card span,header,button{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.card:hover{
+  transition: 1s box-shadow all;
+  transform:;
+  box-shadow: 0px 0px 20px 4px #be6207,0 0 60px 11px #8a4d0f inset;
+}
+.em{
+  margin: .75rem .5rem; 
+  
+}
+.card p {
+  color: black;
+  font-size: 3rem;
+  align-items: center;
+}
+
+.filter {
+  display: none;
+  position: absolute;
+}
+
+/* dropdown */
+* {
+  outline: 0;
+  font-family: sans-serif
+}
+body {
+  background-color: #fafafa
+}
+span.msg,
+span.choose {
+  color: #555;
+  padding: 5px 0 10px;
+  display: inherit
+}
+.contain {
+  width: 500px;
+  margin: 50px auto 0;
+  text-align: center
+}
+
+
+/* buttin */
+
+.button {
+  font-size: 1rem;
+  background-color: #F2E1C1 !important;
+  transform: translateY(-0.10em);
+  box-shadow: 3px 3px 0px rgba(55, 22, 22, 0.67);
+  border: 1px solid rgba(55, 22, 22, 0.67);
+  border-radius: 50px;
+  padding: 0.75em 1.5em;
+  transition: 0.2s;
   cursor: pointer;
 }
 
-.card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  left: -5px;
-  margin: auto;
-  width: 200px;
-  height: 264px;
-  border-radius: 10px;
-  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
-  z-index: -10;
-  pointer-events: none;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+button:hover {
+  box-shadow: 4px 6px 0px rgba(55, 22, 22, 0.67);
+  transform: translateY(-0.4em);
 }
 
-.card::after {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
-  transform: translate3d(0, 0, 0) scale(0.95);
-  filter: blur(20px);
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
 }
-
-.heading {
-  font-size: 20px;
-  text-transform: capitalize;
-  font-weight: 700;
-}
-
-.card p:not(.heading) {
-  font-size: 14px;
-}
-
-.card p:last-child {
-  color: #e81cff;
-  font-weight: 600;
-}
-
-.card:hover::after {
-  filter: blur(30px);
-}
-
-.card:hover::before {
-  transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
-}
-
-
 /*---------------------------------------
   form new - end               
 -----------------------------------------*/
@@ -713,12 +743,46 @@ background-image: linear-gradient(315deg, #3d405b 0%, #74d680 74%);
 .row1{
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
+  /* margin: 0 0 0 0 ; */
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.z1{
+  display: none;
+  transition: display 1s ease;
+
+}
+.z2{
+  display: none;
+  max-width: 63%;
+
+}
+#outz{
+  color:red;
+}
+
+.output1:hover .z1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s all ;
+    box-shadow: 4px 4px var(--main-color);
+}
+.output1:hover .output1{
+  
+  box-shadow: 4px 4px var(--main-color);
+}
+.output:hover .z2{
+  display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .hero-section {
   background-image: url('../images/zombie.jpg');
   background-repeat: no-repeat;
@@ -826,6 +890,7 @@ background-image: linear-gradient(315deg, #3d405b 0%, #74d680 74%);
   top:-80%;
   z-index: -100;
 }
+
 
 .section-bg-image .container + svg {
   transform: rotate(180deg);
@@ -1021,6 +1086,7 @@ background-image: linear-gradient(315deg, #3d405b 0%, #74d680 74%);
           flex: 1 100%;
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
+  width: 120px;
 }
 
 :is(.form) input, select, button {
@@ -1028,10 +1094,17 @@ background-image: linear-gradient(315deg, #3d405b 0%, #74d680 74%);
      -moz-appearance: none;
           appearance: none;
   border: 0;
-  padding: .75em;
+  padding: .35em;
   border-radius: var(--rad);
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
+  background-color: #f3f1ef;
+}
+select{
+
+}
+select:hover, input:hover{
+  background-color: #be630786;
 }
 
 .form label {
@@ -1102,7 +1175,7 @@ background-image: linear-gradient(315deg, #3d405b 0%, #74d680 74%);
 }
 
 .custom-select {
-  position: relative;
+  /* position: relative; */
 }
 
 .custom-select::after {
@@ -1128,18 +1201,9 @@ background-image: linear-gradient(315deg, #3d405b 0%, #74d680 74%);
           flex: 0 1 40px;
 }
 
-.form button {
-  background-color: var(--col1);
-  color: var(--col4);
-  border: 2px solid var(--col4);
-  font-size: 1em;
-  font-weight: 700;
-  -ms-flex-item-align: center;
-      align-self: center;
-  padding: .5em 1.5em;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+.form fieldset  {
+  display: flex;
+  justify-content: space-around;
 }
 
 /* Form and UI valid and invalid states */
@@ -1248,7 +1312,7 @@ label:has(select:valid) {
 }
 /* switch css */
 .switch {
-  --input-focus: #2d8cf0;
+  --input-focus: #ef8b18;
   --font-color: #323232;
   --font-color-sub: #666;
   --bg-color: #fff;
@@ -1262,6 +1326,7 @@ label:has(select:valid) {
   gap: 30px;
   width: 50px;
   height: 20px;
+  margin: inherit;
 }
 
 .toggle {
@@ -1410,8 +1475,90 @@ label:has(select:valid) {
   background: var(--custom-btn-bg-hover-color);
   color: var(--white-color);
 }
+/* video carousel */
+/* <!-- first slider start-->  */
 
+.sliderv { /* блок */ 
+  background: rgba(240,240,240,.5);
+  text-align: center;
+}
 
+/* резиновый iframe: чтобы видео занимало всё доступное пространство и пропорционально уменьшалось/увеличивалось при изменении экрана монитора */ 
+.sliderv div {
+  position: relative;
+  padding-top: 56.25%;
+}
+.sliderv iframe {
+  position: absolute;
+  top: .5%;
+  left: .5%;
+  width: 99%;
+  height: 99%;
+}
+
+/* стиль CSS для кнопок-переключателей (я немного побаловалась), который можно изменять или вовсе не использовать */ 
+.sliderv a {  /* вид кнопок */ 
+  display: inline-block;
+  padding: 0 .5em;
+  text-decoration: none;
+  color: blue;
+}
+.sliderv a:visited {  /* вид кнопок просмотренных видео */ 
+  color: rgb(204,204,203);
+}
+.sliderv a:hover {  /* вид кнопок при наведении */ 
+  transform: scale(1.5);
+}
+.sliderv a:not(:active):focus {  /* блокировка второго клика, но не третьего */ 
+  pointer-events: none;
+}
+.sliderv a::before {  /* из-за Mozilla Firefox приходится использовать псевдоэлемент */ 
+  content: "\25cf";
+  position: absolute;
+  color: rgba(0,0,1,.1);
+  transition: color 0s 9999999s;  /* нужен, чтобы запомнился цвет после нажатия кнопки, подробнее про transition */ 
+}
+.sliderv a:nth-of-type(1)::before {  /* вид первой кнопки при загрузки страницы */ 
+  color: rgb(167, 0, 0);
+}
+.sliderv span:active a::before {  /* для неактивных кнопок псевдоэлемент не нужен */ 
+  color: rgba(0,0,0,0);
+  transition: color 0s;
+}
+.sliderv span:active a:nth-of-type(1)::before {  /* вид неактивной первой кнопки, чтобы она выглядела как посещённая */ 
+  color: #ccc;
+  transition: color 0s;
+}
+.sliderv span:active a:active::before {  /* вид нажатой кнопки [в Internet Explorer отсутствует всплытие :active] */ 
+  color: rgb(167, 0, 0);
+  transition: color 0s;
+}
+/* text */
+.save-text{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.save{
+  font-size:120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  color: #eabb53;
+  font-family: 'Merriweather', serif;
+  font-family: 'Sora', sans-serif;
+  font-family: 'Unbounded', cursive;
+  font-family: 'Ysabeau SC', sans-serif;
+
+}
+medium{
+  font-size: 60px;
+  font-family: 'Merriweather', serif;
+  font-family: 'Sora', sans-serif;
+  font-family: 'Unbounded', cursive;
+  font-family: 'Ysabeau SC', sans-serif;
+}
 /*---------------------------------------
   EVENTS SECTION            
 -----------------------------------------*/
@@ -1540,6 +1687,7 @@ label:has(select:valid) {
   right: 0;
   left: 0;
   pointer-events: none;
+  z-index: 1;
 }
 
 .site-footer-title {
@@ -1557,7 +1705,9 @@ label:has(select:valid) {
   width: 100%;
   height: 100vh;
 }
-
+svg{
+  z-index: 1;
+}
 
 /*---------------------------------------
   CUSTOM FORM               
@@ -1746,6 +1896,9 @@ label:has(select:valid) {
     padding-top: 20px;
     padding-bottom: 100px;
   }
+  /* input{
+    max-width: 40%;
+  } */
 }
 
 @media screen and (max-width: 480px) {

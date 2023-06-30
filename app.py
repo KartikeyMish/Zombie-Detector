@@ -32,9 +32,15 @@ def index():
 
         # Use the ML model to make predictions
         predictions = model.predict(input_data)
+        h ,z= "",""
+        if(predictions>=0.31):
+            z =  "Zombie"
+        else:
+            h = "Human"
+
 
         # Redirect or render a success page with the predictions
-        return render_template('index.html', predictions=predictions)
+        return render_template('index.html',zombie=z ,human=h)
     
     return render_template('index.html')
 

@@ -24,14 +24,17 @@
         <link href="../static/css/bootstrap-icons.css" rel="stylesheet">
 
         <link href="../static/css/style.css" rel="stylesheet" >
-        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Sora&family=Unbounded:wght@300;400&family=Ysabeau+SC:wght@700&display=swap" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     </head>
     
     <body>
         <main>
             <nav class="navbar navbar-expand-lg">                
                 <div class="container">
-                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <a class="navbar-brand d-flex align-items-center" href="">
                         <img src="../static/images/logo.png" class="navbar-brand-image img-fluid" alt="Zombie">
                         <span class="navbar-brand-text">
                             Zombie
@@ -57,15 +60,15 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_3">Save Yourself</a>
+                                <a class="nav-link click-scroll" href="#section_3">Prepare Yourself</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_4">Events</a>
+                                <a class="nav-link click-scroll" href="#section_4">World Situation</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_5">Contact Us</a>
+                                <a class="nav-link click-scroll" href="#section_5">Contact </a>
                             </li>
                         </ul>
                     </div>
@@ -99,15 +102,12 @@
                             <div class="custom-btn-group">
                                 <a href="#section_2" class="btn custom-btn smoothscroll me-3">Lets Find</a>
 
-                                <a href="#section_3" class="link smoothscroll">Know about world</a>
+                                <a href="#section_3" class="link smoothscroll"><b>Know about world</b></a>
                             </div>
                         </div>
 
                         <div class="images" >
-                            <!-- <div class="ratio ratio-16x9">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/dalCkuwabKE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            </div> -->
-                            <!-- <img src="/static/images/shape.png" class="shape"> -->
+                            
                             <img src="/static/images/a1.png" class="zombie img-fluid ">
 
                         </div>
@@ -120,267 +120,215 @@
 
 
             <section class="about-section section-padding" id="section_2">
-        
+                
                 <div class="container">
-
+                    
                     <div class="row1">
-                        <div id="myDiv" style="display: none;" >
-                            <img src="/static/images/z2.png" class="zombie img-fluid ">
-                            <!-- <h3  class="mt-5">
-                                your output is {{predictions}}
-                              </h3> -->
+                        <!-- style="display: none;" -->
+                        
+                        <div class="col-xs-6 output1" style="margin: auto;">
+                            <h3 id ="outz"  class="col-xs-6 text-center m-3" >
+                                {{zombie}}
+                            </h3>
+                            <div class="col-xs-6 z1"  >
+                                <img src="/static/images/z2.png" class=" img-fluid " style="max-width: 65%;">                           
+                            </div>                
                         </div>
-                        <div class="card" >
-                                <form id="myForm" method="post" action="#section_2">
-                                    <header class="text-center">
-                                      Enter person details
-                                    </header>                                    
-                                    <span class="message"></span>
-                                    <fieldset>
-                                    <label class="em">
-                                    <span>Rurality</span>
-                                    <div class="custom-select">
-                                    <select class="input" type="select" required="" id="rurality" name="rurality">
-                                        <option value=0>Rural</option>
-                                        <option value=1>Sub-urban</option>
-                                        <option value=2>Urban</option>         
-                                    </select>
-                                    </div>
-                                </label class="em">
+                        <div class="col-xs-6 card">
+                            <!-- <p>Write here</p> -->
+                            <form id="myForm" method="post" action="#section_2">
+                                <header class=" text-center" style="padding-top: 5%;">
+                                  <b>Person Details</b>
+                                </header>                                    
+                                <span class="message"></span>
+                                <fieldset style="display: flex;justify-content: center;">
                                 <label class="em">
-                                        <span>Household</span>
-                                        <select class="input" type="number" required="" id="household" name="household" aria-placeholder="Select people in house">
-                                          <option>1</option>
-                                          <option>2</option>
-                                          <option>3</option>  
-                                          <option>4</option>
-                                          <option>5</option>
-                                          <option>6</option>
-                                          <option>7</option>
-                                          <option>8</option>    
-                                          </select>  
-                                        </label>
-                                    </fieldset>
-                                    <fieldset>
-                                    <label class="em">
-                                      <span>Age</span>
-                                      <input placeholder="person's age" class="input" type="number" id="age" name="age" required="">
+                                <span>Rurality</span>
+                                
+                                <select class="input" type="select" required="" id="rurality" name="rurality">
+                                    <option value=0>Rural</option>
+                                    <option value=1>Sub-urban</option>
+                                    <option value=2>Urban</option>         
+                                </select>
+                                
+                            </label class="em">
+                            <label class="em">
+                                    <span>Household</span>
+                                    <select class="input" type="number" required="" id="household" name="household">
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>  
+                                      <option>4</option>
+                                      <option>5</option>
+                                      <option>6</option>
+                                      <option>7</option>
+                                      <option>8</option>    
+                                      </select>  
                                     </label>
-                                    <label class="em">
-                                        <span>Water</span>
-                                        <input placeholder="Gallons" class="input" type="number" id="water" name = "water" required="">
-                                      </label>
                                     
                                 </fieldset>
-                                    <fieldset>
+                                <fieldset style="display: flex;justify-content: center;">
+                                <label class="em">
+                                  <span class="text-center">Age</span>
+                                  <input placeholder="person's age" class="input" type="number" id="age" name="age" required="">
+                                </label>
+                                <label class="em">
+                                    <span>Water</span>
+                                    <input placeholder="Gallons" class="input" type="number" id="water" name = "water" required="">
+                                  </label>
+                                
+                            </fieldset>
+                                <fieldset style="display: flex;justify-content: center;">
+                                <label class="em">
+                                    <span>Female - Male</span>
+                                    <label class="switch">
+                                        <input class="toggle" type="checkbox"  id="sex" name="sex">
+                                        <span class="slider"></span>
+                                        <span class="card-side"></span>
+                                    </label>
+                                </label>
+                                <label class="em">
+                                    <span>Foods</span>
+                                    <label class="switch">
+                                        <input class="toggle" type="checkbox" id ="food" name ="food">
+                                        <span class="slider"></span>
+                                        <span class="card-side"></span>
+                                    </label>
+                                </label>
+                                <label class="em">
+                                    <span >First-Aid</span>
+                                    <label class="switch">
+                                        <input class="toggle" type="checkbox" id="aid" name="aid">
+                                        <span class="slider"></span>
+                                        <span class="card-side"></span>
+                                    </label>
+                                </label>
+                                <label class="em">
+                                    <span>Sanitation</span>
+                                    <label class="switch">
+                                        <input class="toggle" type="checkbox" id="sanitation" name="sanitation">
+                                        <span class="slider"></span>
+                                        <span class="card-side"></span>
+                                    </label>
+                                </label>
+    
+                                </fieldset>
+                                <fieldset style="display: flex;justify-content: center;">
                                     <label class="em">
-                                        <span>Female - Male</span>
+                                        <span>Tools</span>
                                         <label class="switch">
-                                            <input class="toggle" type="checkbox"  id="sex" name="sex">
+                                            <input class="toggle" type="checkbox" id="tools" name="tools">
+                                            <span class="slider"></span>
+                                            <span class="card-side"></span>
+                                        </label>
+                                    </label>
+                                
+                                    <label class="em">
+                                        <span>Clothing      </span>
+                                        <label class="switch">
+                                            <input class="toggle" type="checkbox" id="clothing" name="clothing">
                                             <span class="slider"></span>
                                             <span class="card-side"></span>
                                         </label>
                                     </label>
                                     <label class="em">
-                                        <span>Foods</span>
+                                        <span>Documents</span>
                                         <label class="switch">
-                                            <input class="toggle" type="checkbox" id ="food" name ="food">
+                                            <input class="toggle" type="checkbox"id="documents" name="documents">
                                             <span class="slider"></span>
                                             <span class="card-side"></span>
                                         </label>
                                     </label>
                                     <label class="em">
-                                        <span>First-Aid</span>
+                                        <span>Medications</span>
                                         <label class="switch">
-                                            <input class="toggle" type="checkbox" id="aid" name="aid">
+                                            <input class="toggle" type="checkbox" id="medications" name="medications">
                                             <span class="slider"></span>
                                             <span class="card-side"></span>
                                         </label>
                                     </label>
-                                    <label class="em">
-                                        <span>Sanitation</span>
-                                        <label class="switch">
-                                            <input class="toggle" type="checkbox" id="sanitation" name="sanitation">
-                                            <span class="slider"></span>
-                                            <span class="card-side"></span>
-                                        </label>
-                                    </label>
-        
                                     </fieldset>
                                     <fieldset>
-                                        <label class="em">
-                                            <span>Tools</span>
-                                            <label class="switch">
-                                                <input class="toggle" type="checkbox" id="tools" name="tools">
-                                                <span class="slider"></span>
-                                                <span class="card-side"></span>
-                                            </label>
-                                        </label>
-                                    
-                                        <label class="em">
-                                            <span>Clothing</span>
-                                            <label class="switch">
-                                                <input class="toggle" type="checkbox" id="clothing" name="clothing">
-                                                <span class="slider"></span>
-                                                <span class="card-side"></span>
-                                            </label>
-                                        </label>
-                                        <label class="em">
-                                            <span>Documents</span>
-                                            <label class="switch">
-                                                <input class="toggle" type="checkbox"id="documents" name="documents">
-                                                <span class="slider"></span>
-                                                <span class="card-side"></span>
-                                            </label>
-                                        </label>
-                                        <label class="em">
-                                            <span>Medications</span>
-                                            <label class="switch">
-                                                <input class="toggle" type="checkbox" id="medications" name="medications">
-                                                <span class="slider"></span>
-                                                <span class="card-side"></span>
-                                            </label>
-                                        </label>
-                                        </fieldset>
-                                        <button id ="showButton" class="flipButton" type="submit" onclick="toggleCard()">Submit</button>
-                                  </form>
-                                <p class="title">FRONT SIDE</p>                                
+                                    <label class="em">
+                                        <button class="button">
+                                            Know your prediction to survive
+                                          </button>
+                                          </label>
+
+                                </fieldset>
+                                    <!-- <button id ="showButton" class="flipButton" type="submit" onclick="toggleCard()">Submit</button> -->
+                              </form>
                           </div>
-                          
+                          <svg class="filter">
+                            <filter id="wavy2">
+                              <feTurbulence x="0" y="0" baseFrequency="0.0001" numOctaves="5" seed="1"></feTurbulence>
+                              <feDisplacementMap in="SourceGraphic" scale="13"></feDisplacementMap>
+                            </filter>
+                          </svg>
+                          <div class="output" style="margin: auto;">
+                            
+                            <div  style="max-width: 65%; ">
+                                <h3 id ="outz" class="text-center m-3" style="color: rgb(0, 255, 42);">
+                                    {{human}}
+                                </h3>
+                                <img src="/static/images/human4.png" class="zombie img-fluid z2" style="  margin: auto;">                           
+                            </div>                
+                        </div>
+                        
                     </div>
                 </div>
             </section>
 
 
-            <section class="section-bg-image">
+            <section class="section-bg-image" id="section_3">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#000000" fill-opacity="1" d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path></svg>
 
                 <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-12">
+                    <div class="row" style="flex-direction: row-reverse; padding-bottom: 5%;padding-right: 2%;">
+                        <div class="col-lg-5 save-text">
+                            <span class="save navbar-brand-text">
+                                Prepare
+                              <medium class="text-right">Yourself</medium>
+                            </span>
+                        </div>
+                        <div class="col-lg-6">
                             <div class="section-bg-image-block">
-                                <div
-                                    id="carouselVideoExample"
-                                    class="carousel slide carousel-fade"
-                                    data-mdb-ride="carousel"
-                                    >
-                                    <!-- Indicators -->
-                                    <div class="carousel-indicators">
-                                        <button
-                                        type="button"
-                                        data-mdb-target="#carouselVideoExample"
-                                        data-mdb-slide-to="0"
-                                        class="active"
-                                        aria-current="true"
-                                        aria-label="Slide 1"
-                                        ></button>
-                                        <button
-                                        type="button"
-                                        data-mdb-target="#carouselVideoExample"
-                                        data-mdb-slide-to="1"
-                                        aria-label="Slide 2"
-                                        ></button>
-                                        <button
-                                        type="button"
-                                        data-mdb-target="#carouselVideoExample"
-                                        data-mdb-slide-to="2"
-                                        aria-label="Slide 3"
-                                        ></button>
-                                    </div>
-
-                                    <!-- Inner -->
-                                    <div class="carousel-inner">
-                                        <!-- Single item -->
-                                        <div class="carousel-item active">
-                                        <video class="img-fluid" autoplay loop muted>
-                                            <source src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" />
-                                        </video>
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5>First slide label</h5>
-                                            <p>
-                                            Nulla vitae elit libero, a pharetra augue mollis interdum.
-                                            </p>
-                                        </div>
-                                        </div>
-
-                                        <!-- Single item -->
-                                        <div class="carousel-item">
-                                        <video class="img-fluid" autoplay loop muted>
-                                            <source src="https://mdbcdn.b-cdn.net/img/video/forest.mp4" type="video/mp4" />
-                                        </video>
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5>Second slide label</h5>
-                                            <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            </p>
-                                        </div>
-                                        </div>
-
-                                        <!-- Single item -->
-                                        <div class="carousel-item">
-                                        <video class="img-fluid" autoplay loop muted>
-                                            <source
-                                            src="https://mdbcdn.b-cdn.net/img/video/Agua-natural.mp4"
-                                            type="video/mp4"
-                                            />
-                                        </video>
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5>Third slide label</h5>
-                                            <p>
-                                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                                            </p>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <!-- Inner -->
-
-                                    <!-- Controls -->
-                                    <button
-                                        class="carousel-control-prev"
-                                        type="button"
-                                        data-mdb-target="#carouselVideoExample"
-                                        data-mdb-slide="prev"
-                                    >
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button
-                                        class="carousel-control-next"
-                                        type="button"
-                                        data-mdb-target="#carouselVideoExample"
-                                        data-mdb-slide="next"
-                                    >
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-                                    </div>
+                                <div class="sliderv">
+                                    <div><iframe src="//www.youtube.com/embed/T_7oXlqIyzA?rel=0" allowfullscreen frameborder="0" name="slider"></iframe></div>
+                                    <span>
+                                      <a href="//www.youtube.com/embed/T_7oXlqIyzA?rel=0&autoplay=1" target="slider">●
+                                  </a><a href="//www.youtube.com/embed/whV0U2RuUrs?rel=0&autoplay=1" target="slider">●
+                                  </a><a href="//www.youtube.com/embed/4r08wJs9kHY?rel=0&autoplay=1" target="slider">●
+                                  </a><a href="//www.youtube.com/embed/wNt8JS99PrY?rel=0&autoplay=1" target="slider">●</a>
+                                    </span>
+                                </div>  
                             </div>
                         </div>
-
+                        
                     </div>
-                </div>
 
+                </div>
                 <svg viewBox="0 0 1265 144" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="#000000" d="M 0 40 C 164 40 164 20 328 20 L 328 20 L 328 0 L 0 0 Z" stroke-width="0"></path> <path fill="#000000" d="M 327 20 C 445.5 20 445.5 89 564 89 L 564 89 L 564 0 L 327 0 Z" stroke-width="0"></path> <path fill="#000000" d="M 563 89 C 724.5 89 724.5 48 886 48 L 886 48 L 886 0 L 563 0 Z" stroke-width="0"></path><path fill="#000000" d="M 885 48 C 1006.5 48 1006.5 67 1128 67 L 1128 67 L 1128 0 L 885 0 Z" stroke-width="0"></path><path fill="#000000" d="M 1127 67 C 1196 67 1196 0 1265 0 L 1265 0 L 1265 0 L 1127 0 Z" stroke-width="0"></path></svg>
+
             </section>
 
 
             
 
-            <section class="contact-section section-padding" id="section_5">
-                
+            <section class="contact-section section-padding" id="section_4">
+                <div class="container">
                     <div class="col-lg-5 col-12 " style="margin: auto;">
-                        <h2 class="mb-4 pb-2 text-center">World Status</h2>
+                        <h2 class="mb-4 pb-2 text-center">World Situation</h2>
                         <div class="world-parent">
                             <img src="../static/images/hashmap.jpg" class="world">                                
                         </div>
                           
                     </div>                  
-                
+                </div>
             </section>
         </main>
-        <section class="justify-content-center align-items-center" >
-        <footer class="site-footer">
+        <section class="foot justify-content-center align-items-center" id="section_5">
+            <footer class="site-footer">
             <div class="container">
                 <div class="row">
 
@@ -394,54 +342,33 @@
                         </a>
                     </div>
 
-                    <!-- <div class="col-lg-3 col-12">
-                        <h5 class="site-footer-title mb-4">Join Us</h5>
+                   
 
-                        <p class="d-flex border-bottom pb-3 mb-3 me-lg-3">
-                            <span>Mon-Fri</span>
-                            6:00 AM - 6:00 PM
-                        </p>
-
-                        <p class="d-flex me-lg-3">
-                            <span>Sat-Sun</span>
-                            6:30 AM - 8:30 PM
-                        </p>
-                        <br>
-                        <p class="copyright-text">Copyright © 2048 Tiya Golf Club</p>
-                    </div> -->
-
-                        <div class="col-lg-2 col-12 ms-auto">
-                            <ul class="social-icon mt-lg-5 mt-3 mb-4">
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-instagram"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-twitter"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-whatsapp"></a>
-                                </li>
-                            </ul>
-                            <p class="copyright-text">Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
-                            
-                        </div>
+                    <div class="col-lg-2 col-12 ms-auto">
+                        <ul class="social-icon mt-lg-5 mt-3 mb-4">
+                            <li class="social-icon-item">
+                                <a href="https://github.com/kartikeymish" class="social-icon-link bi-github"></a>
+                            </li>
+                            <li class="social-icon-item">
+                                <a href="https://www.linkedin.com/in/kartikeymish/" class="social-icon-link bi-linkedin"></a>
+                            </li>
+                            <li class="social-icon-item">
+                                <a href="https://join.skype.com/invite/yclTsWKasMXU" class="social-icon-link bi-skype"></a>
+                            </li>
+                        </ul>
+                        <p class="copyright-text"><a rel="nofollow" href="https://github.com/kartikeymish" target="_blank">Kartikey Mishra</a></p>              
+                    </div>
 
                 </div>
             </div>
-            <div class="fotter-overlay">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <defs>
-                    <pattern id="bg-pattern" patternUnits="userSpaceOnUse" width="100%" height="100%">
-                      <image href="/static/images/fotter.jpg" x="0" y="0" width="100%" height="100%"preserveAspectRatio="none"  />
-                    </pattern>
-                  </defs>
-                <path fill="url(#bg-pattern)" fill-opacity="1" d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
-            </svg>
-        </div>
             
-              
+          
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="background-image: url(/static/images/fotter.jpg)"><path fill="#000000 " fill-opacity="1" d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path></svg>
+            <!-- <div class="fotter-overlay"> -->
+
+            </div>
+            <!-- <div class="container" ></div> -->
+            
               
             </footer>
         </section>
