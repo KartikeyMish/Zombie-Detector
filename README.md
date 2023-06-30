@@ -51,10 +51,6 @@
 🙌 Contributions to the Zombie Detector Web App are welcome! If you find any bugs or have suggestions for additional features, please submit an issue or open a pull request. We appreciate your feedback and contributions.
 
 
-## Acknowledgments
-
-🙏 We would like to thank the open-source community for their valuable contributions and the developers of the libraries and frameworks used in this project.
-
 ## Contact
 
 📧 For any inquiries or further information, please contact [Kartikey Mishra](mailto:kartikeymishra626@gmail.com).
