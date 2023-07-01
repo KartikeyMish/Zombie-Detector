@@ -3,8 +3,6 @@ import pickle
 
 app = Flask(__name__)
 
-
-
 # Load the ML model from pickle file
 with open('model.pkl', 'rb') as file:
     model = pickle.load(file)
@@ -34,13 +32,13 @@ def index():
         predictions = model.predict(input_data)
         h ,z= "",""
         if(predictions>=0.31):
-            z =  "Zombie"
+            z =  "Zombie - "+str((predictions*100.0)*1.0)+"%"
         else:
-            h = "Human"
+            h = "Human- "+str((predictions*100.0)*1.0)+"%"
 
 
         # Redirect or render a success page with the predictions
-        return render_template('index.html',zombie=z ,human=h)
+        return render_template('index.html',zombie=z ,human=h,)
     
     return render_template('index.html')
 
